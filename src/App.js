@@ -1,27 +1,30 @@
 import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Page from './components/Page';
-import { Col, Container, Row } from 'react-bootstrap';
+import Home from './pages/Home.js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import WildeWeb from './pages/WildeWeb';
+import EraWeb from './pages/EraWeb';
+import Adaptation from './pages/Adaptation';
 
 
 function App() {
   return (
-    <Container bsPrefix="fluid-container">
-      <Row md="1" lg="2">
-        <Col>
-          <Page title="Preface: Oscar Wilde">
-            <p>
-              This website was created by Dr. Kenneth Brewer's Spring 2021 Oscar Wilde class
-            </p>
-          </Page>
-        </Col>
-        <Col>
-          <Page title="Chapter 1: Biographical Websites">
-
-          </Page>
-        </Col>
-      </Row>
-    </Container>
+    <Router>
+      <Switch>
+        <Route path="/adaptations">
+          <Adaptation />
+        </Route>
+        <Route path="/wilde-era-websites">
+          <EraWeb />
+        </Route>
+        <Route path="/wilde-websites">
+          <WildeWeb />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
