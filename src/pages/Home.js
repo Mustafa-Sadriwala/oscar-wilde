@@ -6,7 +6,7 @@ import './../styles/Home.css';
 export default function Home() {
     return (
         <div>
-            <div className="fancy-border">
+            <div className="fancy-border" style={{ minHeight: "100vh" }}>
                 <Container fluid style={{ padding: '5rem' }}>
                     <div style={{ width: '100%', textAlign: "center" }}>
                         <h1>Oscar Wilde</h1>
