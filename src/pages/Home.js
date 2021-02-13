@@ -6,15 +6,15 @@ import './../styles/Home.css';
 export default function Home() {
     return (
         <div>
-            <div className="fancy-border" style={{ minHeight: "100vh" }}>
-                <Container fluid style={{ padding: '5rem' }}>
-                    <div style={{ width: '100%', textAlign: "center" }}>
+            <div className="border">
+                <Container fluid style={{ padding: '2rem' }}>
+                    <div style={{ width: '100%', textAlign: "center", padding: "2rem" }}>
                         <h1>Oscar Wilde</h1>
                     </div>
                     <Row>
                         <Col>
                             <div style={{ textAlign: "center" }}>
-                                <h2>Table of Contents</h2>
+                                <h2 style={{ paddingBottom: "0.5rem" }}>Table of Contents</h2>
                             </div>
                             <div style={{ paddingLeft: 20, paddingTop: 20 }}>
                                 <Link to="/wilde-websites" className="highlight">
@@ -34,7 +34,7 @@ export default function Home() {
                         </Col>
                         <Col>
                             <div style={{ textAlign: "center" }}>
-                                <h2>Acknowledgements</h2>
+                                <h2 style={{ paddingBottom: "0.5rem" }}>Acknowledgements</h2>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
                                     Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
@@ -46,6 +46,8 @@ export default function Home() {
                         </Col>
                     </Row>
                 </Container>
+                <div className="border__horizontal"></div>
+                <div className="border__vertical"></div>
             </div>
         </div>
     )
