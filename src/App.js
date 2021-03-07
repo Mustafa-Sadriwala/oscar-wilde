@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import WildeWeb from './pages/WildeWeb';
 import EraWeb from './pages/EraWeb';
 import Adaptation from './pages/Adaptation';
+import Article from './pages/Article';
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path="/wilde-era-websites">
           <EraWeb />
+        </Route>
+        <Route path="/wilde-websites/:id">
+          <Article />
         </Route>
         <Route path="/wilde-websites">
           <WildeWeb />

@@ -1,0 +1,66 @@
+.jumbotron {
+    border-radius: 0;
+    padding: 0;
+    padding-top: 15vh;
+    margin-bottom: 15vh;
+    background-color: #FF595E;
+}
+
+.header-wrapper {
+    position: relative;
+    padding-top: 10vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.header-box {
+    position: absolute;
+    bottom: -5vh;
+    margin: 0 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    padding: 2vh 2vw;
+    background-color: white;
+    /* border: 1px solid black; */
+    box-shadow: 8px 8px black;
+}
+
+.header-box h1 {
+    font-size: 2.5em;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-box h1 {
+        font-size: 2em;
+    }
+}
+
+.content-card-wrapper {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 2rem;
+}
+
+.content-card {
+    border-radius: 0;
+    width: 100%;
+    border: 0.5rem solid black;
+    transition: all .3s ease-in-out;
+}
+
+.content-card:hover {
+    border: 0.5rem solid #FF595E;
+}
+
+.card-body {
+    padding: 1rem
+}
+
+.content-card-wrapper a:hover {
+    text-decoration: none;
+}
