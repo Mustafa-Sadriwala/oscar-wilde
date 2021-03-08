@@ -12,11 +12,28 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--text-color)
 }
 
+
+::-moz-selection {
+  background: var(--accent-color);
+  color: white;
+}
+
+::-webkit-selection {
+  background: var(--accent-color);
+  color: white
+}
+
+::selection {
+  background: var(--accent-color);
+  color: white;
+}
+
 :root {
   /* --accent-color: #e55743; */
   --accent-color: #E57371;
   --text-color: black;
   --text-color2: #343434;
+  --wilde-website-color: #FF595E;
 }
 
 .highlight {

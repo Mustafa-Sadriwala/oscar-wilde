@@ -5,7 +5,7 @@ import '../styles/ContentPage.css';
 
 export default function WildeWeb() {
     return (
-        <div className="mx-0">
+        <div className="mx-0 wilde-websites">
             <Jumbotron>
                 <div className="header-wrapper">
                     <div className="header-box">

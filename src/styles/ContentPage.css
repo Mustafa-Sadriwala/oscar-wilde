@@ -1,9 +1,24 @@
+.wilde-websites ::-moz-selection {
+    background: var(--wilde-website-color);
+    color: white;
+}
+
+.wilde-websites ::-webkit-selection {
+    background: var(--wilde-website-color);
+    color: white
+}
+
+.wilde-websites ::selection {
+    background: var(--wilde-website-color);
+    color: white;
+}
+
 .jumbotron {
     border-radius: 0;
     padding: 0;
     padding-top: 15vh;
     margin-bottom: 15vh;
-    background-color: #FF595E;
+    background-color: var(--wilde-website-color);
 }
 
 .header-wrapper {
@@ -30,14 +45,22 @@
     box-shadow: 8px 8px black;
 }
 
-.header-box h1 {
-    font-size: 2.5em;
+.article .header-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
 }
 
-@media only screen and (max-width: 600px) {
-    .header-box h1 {
-        font-size: 2em;
-    }
+.article .header-box {
+    position: absolute;
+    display: block;
+    justify-content: left;
+    background-color: white;
+    box-shadow: -8px 8px black;
+    margin-left: 2vw
 }
 
 .content-card-wrapper {
@@ -54,7 +77,7 @@
 }
 
 .content-card:hover {
-    border: 0.5rem solid #FF595E;
+    border: 0.5rem solid var(--wilde-website-color);
 }
 
 .card-body {
@@ -63,4 +86,33 @@
 
 .content-card-wrapper a:hover {
     text-decoration: none;
+}
+
+.image-frame {
+    margin: 1vw 1vw;
+    margin-right: 3vw;
+    display: flex;
+    float: right;
+    height: 40vh;
+    border: 0.5rem solid black;
+    transition: all .3s ease-in-out;
+}
+
+.image-frame:hover {
+    border: 0.5rem solid var(--wilde-website-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .header-box h1 {
+        font-size: 2em;
+    }
+    .header-box h2 {
+        font-size: 1.5em;
+    }
+    .header-box h4 {
+        font-size: 1em;
+    }
+    .image-frame {
+        display: none;
+    }
 }
