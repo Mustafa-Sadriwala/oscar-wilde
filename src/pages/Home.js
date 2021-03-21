@@ -7,7 +7,8 @@ const CHAPTERS = [
     {
         title: "Chapter One: Wilde Websites",
         shortTitle: "Wilde Websites",
-        link: "/wilde-websites"
+        link: "/wilde-websites",
+        className: "wilde-websites"
     },
     {
         title: "Chapter Two: Websites on Wilde's Era",
@@ -37,10 +38,10 @@ export default function Home() {
                             {
                                 CHAPTERS.map((chapter) => {
                                     return (
-                                        <div style={{ paddingLeft: 20, paddingTop: 20 }}>
-                                            <Link to={chapter.link} className="highlight">
-                                                <h4 className="d-none d-md-block">{chapter.title}</h4>
-                                                <h4 className="d-block d-md-none">{chapter.shortTitle}</h4>
+                                        <div style={{ paddingLeft: 20, paddingTop: 20 }} key={chapter.title}>
+                                            <Link to={chapter.link} className={"highlight " + chapter.className}>
+                                                <h4 className={"d-none d-md-block chapter-title " + chapter.className}>{chapter.title}</h4>
+                                                <h4 className={"d-block d-md-none chapter-title " + chapter.className}>{chapter.shortTitle}</h4>
                                             </Link>
                                         </div>
                                     )

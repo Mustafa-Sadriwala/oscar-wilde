@@ -22,10 +22,10 @@ export default function Article() {
             <div className={"article " + location.pathname.split('/')[1]}>
                 <Jumbotron>
                     <div className="header-wrapper">
-                        <div className="header-box py-3">
+                        <div className="header-box pt-3 pb-1">
                             <h1 className="mb-1">{articleInfo.title}</h1>
                             <h2 className="mb-2">By: {articleInfo.author}</h2>
-                            <h4><a href={articleInfo.website} target="_blank" rel="noreferrer">website</a></h4>
+                            <p>source: <a href={articleInfo.website} target="_blank" rel="noreferrer">{articleInfo.website}</a></p>
                         </div>
                     </div>
                 </Jumbotron>
@@ -37,7 +37,7 @@ export default function Article() {
                 <div>
                     {articleInfo.content.split('\n').map((paragraph, index) => {
                         return (
-                            <div className="mx-5">
+                            <div className="mx-5" key={index}>
                                 <p style={{ fontSize: '1.2rem', letterSpacing: '0.015rem' }} key={index}>&emsp;&emsp;{paragraph}</p>
                                 <span style={{ height: '2rem' }} />
                             </div>

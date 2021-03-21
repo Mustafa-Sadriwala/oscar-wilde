@@ -32,7 +32,7 @@
 
 .border__horizontal, .border__vertical {
     z-index: -2;
-    border-color: var(--accent-color);
+    border-color: var(--home-color);
     position: absolute;
     top: var(--horizontal-offset, 0);
     right: var(--vertical-offset, 0);

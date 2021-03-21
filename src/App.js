@@ -18,7 +18,7 @@ function App() {
         <Route path="/wilde-era-websites">
           <EraWeb />
         </Route>
-        <Route path="/wilde-websites/:slug">
+        <Route exact path="/wilde-websites/:slug">
           <Article />
         </Route>
         <Route path="/wilde-websites">
