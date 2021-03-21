@@ -13,12 +13,14 @@ const CHAPTERS = [
     {
         title: "Chapter Two: Websites on Wilde's Era",
         shortTitle: "Websites on Wilde's Era",
-        link: "/wilde-era-websites"
+        link: "/wilde-era-websites",
+        className: "wilde-era"
     },
     {
         title: "Chapter Three: Adaptations of Wilde",
         shortTitle: "Adaptations of Wilde",
-        link: "/adaptations"
+        link: "/adaptations",
+        className: "adaptations"
     }
 ]
 

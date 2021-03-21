@@ -12,6 +12,9 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/adaptations/:slug">
+          <Article />
+        </Route>
         <Route path="/adaptations">
           <Adaptation />
         </Route>

@@ -3,6 +3,8 @@ import { Jumbotron } from "react-bootstrap";
 import { useLocation, useParams } from "react-router-dom"
 
 import websiteData from '../data/wilde-web-evals.json';
+import adaptationData from '../data/adaptations.json';
+
 
 export default function Article() {
     let location = useLocation()
@@ -13,6 +15,7 @@ export default function Article() {
         const where = location.pathname.split('/')
         switch (where[1]) {
             case "wilde-websites": setArticleInfo(websiteData.find((data) => data.slug === slug)); break;
+            case "adaptations": setArticleInfo(adaptationData.find((data) => data.slug === slug)); break;
             default: setArticleInfo(websiteData.find((data) => data.slug === slug)); break;
         }
     }, [slug, location])
@@ -25,12 +28,12 @@ export default function Article() {
                         <div className="header-box pt-3 pb-1">
                             <h1 className="mb-1">{articleInfo.title}</h1>
                             <h2 className="mb-2">By: {articleInfo.author}</h2>
-                            <p>source: <a href={articleInfo.website} target="_blank" rel="noreferrer">{articleInfo.website}</a></p>
+                            {articleInfo.website != null && <p>source: <a href={articleInfo.website} target="_blank" rel="noreferrer">{articleInfo.website}</a></p>}
                         </div>
                     </div>
                 </Jumbotron>
                 <a href={articleInfo.website} target="_blank" rel="noreferrer">
-                    <div className="image-frame">
+                    <div className={"image-frame " + location.pathname.split('/')[1]}>
                         <img height="100%" src={articleInfo.image} />
                     </div>
                 </a>
