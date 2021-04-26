@@ -13,6 +13,21 @@
     color: white;
 }
 
+.wilde-era-websites ::-moz-selection {
+    background: var(--wilde-era-color);
+    color: white;
+}
+
+.wilde-era-websites ::-webkit-selection {
+    background: var(--wilde-era-color);
+    color: white
+}
+
+.wilde-era-websites ::selection {
+    background: var(--wilde-era-color);
+    color: white;
+}
+
 .adaptations ::-moz-selection {
     background: var(--adaptations-color);
     color: white;
@@ -38,6 +53,10 @@
 
 .wilde-websites .jumbotron {
     background-color: var(--wilde-website-color);
+}
+
+.wilde-era-websites .jumbotron {
+    background-color: var(--wilde-era-color);
 }
 
 .adaptations .jumbotron {
@@ -103,6 +122,10 @@
     border: 0.5rem solid var(--wilde-website-color);
 }
 
+.wilde-era-websites .content-card:hover {
+    border: 0.5rem solid var(--wilde-era-color);
+}
+
 .adaptations .content-card:hover {
     border: 0.5rem solid var(--adaptations-color);
 }
@@ -129,9 +152,14 @@
     border: 0.5rem solid var(--wilde-website-color);
 }
 
+.wilde-era-websites.image-frame:hover {
+    border: 0.5rem solid var(--wilde-era-color);
+}
+
 .adaptations.image-frame {
     border: 0.5rem solid var(--adaptations-color);
 }
+
 .adaptations.image-frame:hover {
     border: auto;
 }

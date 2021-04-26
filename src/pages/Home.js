@@ -5,19 +5,19 @@ import './../styles/Home.css';
 
 const CHAPTERS = [
     {
-        title: "Chapter One: Wilde Websites",
+        title: "1. Wilde Websites",
         shortTitle: "Wilde Websites",
         link: "/wilde-websites",
         className: "wilde-websites"
     },
     {
-        title: "Chapter Two: Websites on Wilde's Era",
+        title: "2. Websites on Wilde's Era",
         shortTitle: "Websites on Wilde's Era",
         link: "/wilde-era-websites",
         className: "wilde-era"
     },
     {
-        title: "Chapter Three: Adaptations of Wilde",
+        title: "3. Adaptations of Wilde",
         shortTitle: "Adaptations of Wilde",
         link: "/adaptations",
         className: "adaptations"
@@ -35,7 +35,7 @@ export default function Home() {
                     <Row>
                         <Col style={{ paddingBottom: '2rem' }}>
                             <div style={{ textAlign: "center" }}>
-                                <h2 style={{ paddingBottom: "0.5rem" }}>Table of Contents</h2>
+                                <h2 style={{ paddingBottom: "0.5rem" }}>Chapters</h2>
                             </div>
                             {
                                 CHAPTERS.map((chapter) => {

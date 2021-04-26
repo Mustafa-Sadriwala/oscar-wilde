@@ -18,6 +18,9 @@ function App() {
         <Route path="/adaptations">
           <Adaptation />
         </Route>
+        <Route exact path="/wilde-era-websites/:slug">
+          <Article />
+        </Route>
         <Route path="/wilde-era-websites">
           <EraWeb />
         </Route>
