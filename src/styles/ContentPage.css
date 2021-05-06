@@ -164,6 +164,33 @@
     border: auto;
 }
 
+.wilde-websites.navbar {
+    background-color: var(--wilde-website-color);
+}
+
+.wilde-era-websites.navbar {
+    background-color: var(--wilde-era-color);
+}
+
+.adaptations.navbar {
+    background-color: var(--adaptations-color);
+}
+
+.navbar a {
+    color: black;
+    text-decoration: underline;
+}
+
+.navbar a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.dropdown-menu a:hover {
+    color: black;
+    font-weight: 500;
+}
+
 @media only screen and (max-width: 600px) {
     .header-box h1 {
         font-size: 2em;

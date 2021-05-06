@@ -1,11 +1,13 @@
 import { Card, Col, Image, Jumbotron, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import NavHeader, { getCrumbName } from '../components/NavHeader';
 import data from '../data/adaptations.json';
 import '../styles/ContentPage.css';
 
 export default function Adaptation() {
     return (
         <div className="mx-0 adaptations">
+            <NavHeader crumbTitle={getCrumbName('adaptations')} background="adaptations" />
             <Jumbotron>
                 <div className="header-wrapper">
                     <div className="header-box">

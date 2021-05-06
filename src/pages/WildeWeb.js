@@ -1,11 +1,13 @@
-import { Card, Col, Image, Jumbotron, Row } from 'react-bootstrap';
+import { Card, Col, Image, Jumbotron, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import NavHeader, { getCrumbName } from '../components/NavHeader';
 import data from '../data/wilde-web-evals.json';
 import '../styles/ContentPage.css';
 
 export default function WildeWeb() {
     return (
         <div className="mx-0 wilde-websites">
+            <NavHeader crumbTitle={getCrumbName('wilde-websites')} background="wilde-websites" />
             <Jumbotron>
                 <div className="header-wrapper">
                     <div className="header-box">

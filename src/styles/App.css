@@ -12,6 +12,10 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--text-color)
 }
 
+.drop-shadow, .dropdown-menu {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 ::-moz-selection {
   background: var(--home-color);
   color: white;
@@ -100,4 +104,23 @@ h4.wilde-era:hover {
 
 h4.adaptations:hover {
   color: #fff
+}
+
+.custom-breadcrumb {
+  background-color: transparent;
+  margin-bottom: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  border-radius: .25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-breadcrumb.small {
+  font-size: 100%;
+}
+
+.custom-breadcrumb.large {
+  font-size: 110%;
 }

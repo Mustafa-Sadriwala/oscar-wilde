@@ -5,6 +5,7 @@ import { useLocation, useParams } from "react-router-dom"
 import websiteData from '../data/wilde-web-evals.json';
 import adaptationData from '../data/adaptations.json';
 import eraWebsiteDate from '../data/wilde-era-web.json';
+import NavHeader from "../components/NavHeader";
 
 
 export default function Article() {
@@ -22,15 +23,18 @@ export default function Article() {
         }
     }, [slug, location])
 
+    const crumbTitle = articleInfo != null ? (articleInfo.author + ': ' + articleInfo.title) : ''
+
     if (articleInfo != null) {
         return (
             <div className={"article " + location.pathname.split('/')[1]}>
+                <NavHeader crumbTitle={crumbTitle.length > 50 ? crumbTitle.substring(0,50) + '...' : crumbTitle} background={location.pathname.split('/')[1]} />
                 <Jumbotron>
                     <div className="header-wrapper">
                         <div className="header-box pt-3 pb-1">
                             <h1 className="mb-1">{articleInfo.title}</h1>
                             <h2 className="mb-2">By: {articleInfo.author}</h2>
-                            {articleInfo.website != null && <p>source: <a href={articleInfo.website} target="_blank" rel="noreferrer">{articleInfo.website}</a></p>}
+                            {articleInfo.website != null && <p>source: <a href={articleInfo.website} target="_blank" rel="noreferrer">{articleInfo.website.length > 50 ? articleInfo.website.substring(0,50) + '...' : articleInfo.website}</a></p>}
                         </div>
                     </div>
                 </Jumbotron>

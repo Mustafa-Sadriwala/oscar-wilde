@@ -1,15 +1,17 @@
 import { Card, Col, Image, Jumbotron, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import NavHeader, { getCrumbName } from '../components/NavHeader';
 import data from '../data/wilde-era-web.json';
 import '../styles/ContentPage.css';
 
 export default function EraWeb() {
     return (
         <div className="mx-0 wilde-era-websites">
+            <NavHeader crumbTitle={getCrumbName('wilde-era-websites')} background="wilde-era-websites" />
             <Jumbotron>
                 <div className="header-wrapper">
                     <div className="header-box">
-                        <h1 style={{ textAlign: 'center' }}>Evaluating a Wilde-related Website</h1>
+                        <h1 style={{ textAlign: 'center' }}>Evaluating a Website on Wilde's Era</h1>
                     </div>
                 </div>
             </Jumbotron>
