@@ -6,6 +6,7 @@ import WildeWeb from './pages/WildeWeb';
 import EraWeb from './pages/EraWeb';
 import Adaptation from './pages/Adaptation';
 import Article from './pages/Article';
+import BookCovers from './pages/BookCovers';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
@@ -40,6 +41,12 @@ function App() {
         </Route>
         <Route path="/wilde-websites">
           <WildeWeb />
+        </Route>
+        <Route exact path="/book-covers/:slug">
+          <Article />
+        </Route>
+        <Route path="/book-covers">
+          <BookCovers />
         </Route>
         <Route path="/">
           <Home />

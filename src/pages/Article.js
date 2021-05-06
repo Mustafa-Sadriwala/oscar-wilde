@@ -4,7 +4,8 @@ import { useLocation, useParams } from "react-router-dom"
 
 import websiteData from '../data/wilde-web-evals.json';
 import adaptationData from '../data/adaptations.json';
-import eraWebsiteDate from '../data/wilde-era-web.json';
+import eraWebsiteData from '../data/wilde-era-web.json';
+import bookData from '../data/bad-book-covers.json';
 import NavHeader from "../components/NavHeader";
 
 
@@ -18,7 +19,8 @@ export default function Article() {
         switch (where[1]) {
             case "wilde-websites": setArticleInfo(websiteData.find((data) => data.slug === slug)); break;
             case "adaptations": setArticleInfo(adaptationData.find((data) => data.slug === slug)); break;
-            case "wilde-era-websites": setArticleInfo(eraWebsiteDate.find((data) => data.slug === slug)); break;
+            case "wilde-era-websites": setArticleInfo(eraWebsiteData.find((data) => data.slug === slug)); break;
+            case "book-covers": setArticleInfo(bookData.find((data) => data.slug === slug)); break;
             default: setArticleInfo(websiteData.find((data) => data.slug === slug)); break;
         }
     }, [slug, location])

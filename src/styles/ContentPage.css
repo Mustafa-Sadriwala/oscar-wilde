@@ -43,6 +43,20 @@
     color: white;
 }
 
+.book-covers ::-moz-selection {
+    background: var(--book-cover-color);
+    color: white;
+}
+
+.book-covers ::-webkit-selection {
+    background: var(--book-cover-color);
+    color: white
+}
+
+.book-covers ::selection {
+    background: var(--book-cover-color);
+    color: white;
+}
 
 .jumbotron {
     border-radius: 0;
@@ -61,6 +75,10 @@
 
 .adaptations .jumbotron {
     background-color: var(--adaptations-color);
+}
+
+.book-covers .jumbotron {
+    background-color: var(--book-cover-color);
 }
 
 .header-wrapper {
@@ -130,6 +148,10 @@
     border: 0.5rem solid var(--adaptations-color);
 }
 
+.book-covers .content-card:hover {
+    border: 0.5rem solid var(--book-cover-color);
+}
+
 .card-body {
     padding: 1rem
 }
@@ -160,8 +182,12 @@
     border: 0.5rem solid var(--adaptations-color);
 }
 
-.adaptations.image-frame:hover {
+.adaptations.image-frame:hover, .book-covers.image-frame:hover {
     border: auto;
+}
+
+.book-covers.image-frame {
+    border: 0.5rem solid var(--book-cover-color);
 }
 
 .wilde-websites.navbar {
@@ -174,6 +200,10 @@
 
 .adaptations.navbar {
     background-color: var(--adaptations-color);
+}
+
+.book-covers.navbar {
+    background-color: var(--book-cover-color);
 }
 
 .navbar a {

@@ -40,6 +40,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --wilde-website-color: #f94144;
   --wilde-era-color: #f8961e;
   --adaptations-color: #f9c74f;
+  --book-cover-color: #90BE6D;
 }
 
 .highlight {
@@ -90,7 +91,7 @@ h4.wilde-websites:hover {
   color: #fff
 }
 
-.highlight.wilde-era::after {
+.highlight.wilde-era-websites::after {
   background-color: var(--wilde-era-color);
 }
 
@@ -100,6 +101,14 @@ h4.wilde-era:hover {
 
 .highlight.adaptations::after {
   background-color: var(--adaptations-color);
+}
+
+h4.adaptations:hover {
+  color: #fff
+}
+
+.highlight.book-covers::after {
+  background-color: var(--book-cover-color);
 }
 
 h4.adaptations:hover {
