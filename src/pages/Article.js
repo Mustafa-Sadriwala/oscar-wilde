@@ -6,6 +6,7 @@ import websiteData from '../data/wilde-web-evals.json';
 import adaptationData from '../data/adaptations.json';
 import eraWebsiteData from '../data/wilde-era-web.json';
 import bookData from '../data/bad-book-covers.json';
+import authorData from '../data/authors.json';
 import NavHeader from "../components/NavHeader";
 
 
@@ -13,6 +14,7 @@ export default function Article() {
     let location = useLocation()
     let { slug } = useParams()
     const [articleInfo, setArticleInfo] = useState(null);
+    const [author, setAuthor] = useState(null);
 
     useEffect(() => {
         const where = location.pathname.split('/')
@@ -25,18 +27,33 @@ export default function Article() {
         }
     }, [slug, location])
 
+    useEffect(() => {
+        if (articleInfo != null) {
+            setAuthor(authorData.find(data => data.name === articleInfo.author));
+        }
+    }, [articleInfo])
+
     const crumbTitle = articleInfo != null ? (articleInfo.author + ': ' + articleInfo.title) : ''
 
     if (articleInfo != null) {
         return (
             <div className={"article " + location.pathname.split('/')[1]}>
-                <NavHeader crumbTitle={crumbTitle.length > 50 ? crumbTitle.substring(0,50) + '...' : crumbTitle} background={location.pathname.split('/')[1]} />
+                <NavHeader crumbTitle={crumbTitle.length > 50 ? crumbTitle.substring(0, 50) + '...' : crumbTitle} background={location.pathname.split('/')[1]} />
                 <Jumbotron>
                     <div className="header-wrapper">
                         <div className="header-box pt-3 pb-1">
                             <h1 className="mb-1">{articleInfo.title}</h1>
-                            <h2 className="mb-2">By: {articleInfo.author}</h2>
-                            {articleInfo.website != null && <p>source: <a href={articleInfo.website} target="_blank" rel="noreferrer">{articleInfo.website.length > 50 ? articleInfo.website.substring(0,50) + '...' : articleInfo.website}</a></p>}
+                            {articleInfo.website != null && <p>source: <a href={articleInfo.website} target="_blank" rel="noreferrer">{articleInfo.website.length > 50 ? articleInfo.website.substring(0, 50) + '...' : articleInfo.website}</a></p>}
+                            <div className="d-flex justify-content-end">
+                                <a href={author != null && ("/authors/" + author.slug)} className="author-link px-3 py-2 mt-2 mb-2">
+                                    <h4 className="text-right mb-0">
+                                        <div className="d-inline-block mr-2">
+                                            <img className="rounded-circle profile-avatar" src={author != null && author.image} />
+                                        </div>
+                                        {articleInfo.author}
+                                    </h4>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </Jumbotron>

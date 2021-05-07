@@ -41,6 +41,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --wilde-era-color: #f8961e;
   --adaptations-color: #f9c74f;
   --book-cover-color: #90BE6D;
+  --author-color: #577590;
 }
 
 .highlight {
@@ -111,7 +112,15 @@ h4.adaptations:hover {
   background-color: var(--book-cover-color);
 }
 
-h4.adaptations:hover {
+h4.book-covers:hover {
+  color: #fff
+}
+
+.highlight.authors::after {
+  background-color: var(--author-color);
+}
+
+h4.authors:hover {
   color: #fff
 }
 
@@ -132,4 +141,11 @@ h4.adaptations:hover {
 
 .custom-breadcrumb.large {
   font-size: 110%;
+}
+
+.profile-avatar {
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+  border: 4px solid black;
 }

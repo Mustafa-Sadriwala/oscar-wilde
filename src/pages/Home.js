@@ -27,6 +27,12 @@ const CHAPTERS = [
         shortTitle: "Bad Book Covers",
         link: "/book-covers",
         className: "book-covers"
+    },
+    {
+        title: "5. Authors",
+        shortTitle: "Authors",
+        link: "/authors",
+        className: "authors"
     }
 ]
 

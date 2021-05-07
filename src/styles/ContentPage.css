@@ -58,6 +58,21 @@
     color: white;
 }
 
+.authors ::-moz-selection {
+    background: var(--author-color);
+    color: white;
+}
+
+.authors ::-webkit-selection {
+    background: var(--author-color);
+    color: white
+}
+
+.authors ::selection {
+    background: var(--author-color);
+    color: white;
+}
+
 .jumbotron {
     border-radius: 0;
     padding: 0;
@@ -79,6 +94,10 @@
 
 .book-covers .jumbotron {
     background-color: var(--book-cover-color);
+}
+
+.authors .jumbotron {
+    background-color: var(--author-color);
 }
 
 .header-wrapper {
@@ -152,6 +171,10 @@
     border: 0.5rem solid var(--book-cover-color);
 }
 
+.authors .content-card:hover {
+    border: 0.5rem solid var(--author-color);
+}
+
 .card-body {
     padding: 1rem
 }
@@ -206,6 +229,15 @@
     background-color: var(--book-cover-color);
 }
 
+.authors.navbar {
+    background-color: var(--author-color);
+    color: white;
+}
+
+.authors.navbar .breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+}
+
 .navbar a {
     color: black;
     text-decoration: underline;
@@ -216,9 +248,33 @@
     text-decoration: underline;
 }
 
-.dropdown-menu a:hover {
+.authors.navbar a {
+    color: white;
+    text-decoration: underline;
+}
+
+.authors.navbar a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.authors.navbar .dropdown-menu a {
+    color: black;
+    font-weight: 400;
+}
+
+.dropdown-menu a:hover, .authors.navbar .dropdown-menu a:hover {
     color: black;
     font-weight: 500;
+}
+
+.author-link {
+    border-radius: 10px;
+    color: black;
+}
+
+.author-link:hover {
+    background-color: rgb(241, 233, 233);
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,7 +1,72 @@
 [
     {
+        "name": "Kerry Bowles",
+        "slug": "kerry-bowles",
+        "image": "/images/generic/painting-watercolor.png"
+    },
+    {
+        "name": "Misti Sutton",
+        "slug": "misti-sutton",
+        "image": "/images/generic/bw-cigar-portrait.png"
+    },
+    {
+        "name": "Evan Gerdes",
+        "slug": "evan-gerdes",
+        "image": "/images/generic/stephen-fry-Wilde.png"
+    },
+    {
+        "name": "Ally Duong",
+        "slug": "ally-duong",
+        "image": "/images/generic/Last_Photo_Oscar_Wilde.jpg"
+    },
+    {
+        "name": "Peter Wilt",
+        "slug": "peter-wilt",
+        "image": "/images/generic/sketch.jpg"
+    },
+    {
+        "name": "Samantha Poliarco",
+        "slug": "samantha-poliarco",
+        "image": "/images/generic/pride.png"
+    },
+    {
         "name": "Emma Henderson",
         "slug": "emma-henderson",
-        "profilePicUrl": "https://google.com/image.png"
+        "image": "/images/generic/Wilde+Douglas1893.jpg"
+    },
+    {
+        "name": "Racheal Travis",
+        "slug": "racheal-travis",
+        "image": "/images/generic/trials.jpg"
+    },
+    {
+        "name": "Natalie Westbrook",
+        "slug": "natalie-westbrook",
+        "image": "/images/generic/trade-card.jpg"
+    },
+    {
+        "name": "Louis Saldana",
+        "slug": "louis-saldana",
+        "image": "/images/generic/bw-picture-chillin.jpeg"
+    },
+    {
+        "name": "Juhi Karnalkar",
+        "slug": "juhi-karnalkar",
+        "image": "/images/generic/cartoon.png"
+    },
+    {
+        "name": "Kellie Meyers",
+        "slug": "kellie-meyers",
+        "image": "/images/generic/bw-picture-hat.JPG"
+    },
+    {
+        "name": "Catherine Yoo",
+        "slug": "catherine-yoo",
+        "image": "/images/generic/victorian-women.jpeg"
+    },
+    {
+        "name": "Juanaisel Marez",
+        "slug": "juanaisel-marez",
+        "image": "/images/generic/bw-picture-soldier.jpg"
     }
 ]

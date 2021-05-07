@@ -11,7 +11,8 @@ export function getCrumbName(crumb) {
         case 'wilde-websites': return 'Evaluating a Wilde-related Website';
         case 'wilde-era-websites': return 'Evaluating a Website on Wilde\'s Era';
         case 'adaptations': return 'Evaluating an Adaptation';
-        case 'book-covers': return 'Bad Book Covers'
+        case 'book-covers': return 'Bad Book Covers';
+        case 'authors': return 'Authors';
         default: return crumb;
     }
 }
@@ -74,6 +75,7 @@ export default function NavHeader({ crumbTitle, background }) {
                     <NavDropdown.Item href="/wilde-era-websites">Websites on Wilde's Era</NavDropdown.Item>
                     <NavDropdown.Item href="/adaptations">Adaptations of Wilde</NavDropdown.Item>
                     <NavDropdown.Item href="/book-covers">Bad Book Covers</NavDropdown.Item>
+                    <NavDropdown.Item href="/authors">Authors</NavDropdown.Item>
                 </NavDropdown>
             </Col>
         </Navbar>

@@ -8,6 +8,8 @@ import Adaptation from './pages/Adaptation';
 import Article from './pages/Article';
 import BookCovers from './pages/BookCovers';
 import { useEffect } from 'react';
+import Authors from './pages/Authors';
+import Profile from './pages/Profile';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +49,12 @@ function App() {
         </Route>
         <Route path="/book-covers">
           <BookCovers />
+        </Route>
+        <Route exact path="/authors/:slug">
+          <Profile />
+        </Route>
+        <Route path="/authors">
+          <Authors />
         </Route>
         <Route path="/">
           <Home />
